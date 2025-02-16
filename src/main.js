@@ -76,10 +76,9 @@ window.addEventListener('DOMContentLoaded', () => {
   function smoothScroll() {
     const firstImage = imagesGallery.querySelector('.gallery-item');
     if (firstImage) {
-      const cardHeight = firstImage.getBoundingClientRect().height;
-      console.log(cardHeight);
+      const imageHeight = firstImage.getBoundingClientRect().height;
       window.scrollBy({
-        top: cardHeight * 2,
+        top: imageHeight * 2,
         behavior: 'smooth',
       });
     }
