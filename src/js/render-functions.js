@@ -24,6 +24,21 @@ export function renderErrorMessage() {
     animateInside: false,
     messageSize: '16',
     transitionIn: 'fadeIn',
+    class: 'error',
+  });
+}
+
+export function renderInfoMessage() {
+  return iziToast.info({
+    message: `We're sorry, but you've reached the end of search results.`,
+    position: 'topRight',
+    messageColor: '#000',
+    iconColor: '#000',
+    progressBar: true,
+    timeout: 10000,
+    animateInside: false,
+    messageSize: '16',
+    transitionIn: 'fadeIn',
   });
 }
 
@@ -53,7 +68,7 @@ export function renderImages(images, gallery) {
                  </ul>
               </li>`;
   });
-  gallery.insertAdjacentHTML('afterbegin', imagesHTMLArray.join(''));
+  gallery.insertAdjacentHTML('beforeend', imagesHTMLArray.join(''));
   galleryPopup.refresh();
 }
 

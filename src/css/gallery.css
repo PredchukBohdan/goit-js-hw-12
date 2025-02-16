@@ -29,7 +29,7 @@
 .search-form input:focus-visible {
   outline: none;
 }
-.search-form button {
+.button {
   font-family: 'Montserrat', sans-serif;
   flex-shrink: 0;
   font-weight: 500;
@@ -43,9 +43,17 @@
   padding: 8px 16px;
   transition: background-color 0.3s ease;
 }
-.search-form button:hover,
-.search-form button:focus {
+.button:hover,
+.button:focus {
   background-color: #6c8cff;
+}
+.load.button {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  display: none;
+}
+.load.button.show {
+  display: block;
 }
 
 .images-gallery {
@@ -155,11 +163,17 @@
   margin: 0 !important;
 }
 .iziToast-close {
-  background-size: 14px;
-  background: url('../img/Vector.svg') !important;
+  background-size: 14px !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+  opacity: 1 !important;
+}
+.error .iziToast-close {
+  background: url('../img/Vector.svg') !important;
   height: 94% !important;
+  background-size: 14px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
   opacity: 1 !important;
 }
 
